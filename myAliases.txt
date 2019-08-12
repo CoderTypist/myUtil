@@ -1,0 +1,9 @@
+# Copy these aliases to the .bashrc file
+
+alias cdbin='cd /usr/bin'
+alias lsbin='ls /usr/bin'
+alias listbin='ls -la /usr/bin'
+alias cdlbin='cd /usr/local/bin'
+alias lslbin='ls /usr/local/bin'
+alias listlbin='ls -la /usr/local/bin'
+alias ret='cd $OLDPWD'
