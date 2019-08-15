@@ -1,5 +1,5 @@
-# Copy these aliases to the .bashrc file
-
+# myAliases
+# https://github.com/CoderTypist/myUtil/blob/master/myAliases.txt
 alias cdbin='cd /usr/bin'
 alias lsbin='ls /usr/bin'
 alias listbin='ls -la /usr/bin'
