@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# clones repository
-git clone https://github.com/CoderTypist/myUtil.git
 # appends aliases to .bashrc
 cat ./myUtil/myAliases.txt >> ~/.bashrc
 rm ./myUtil/myAliases.txt
