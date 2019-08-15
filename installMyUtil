@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# copies aliases to .bashrc
+# clones repository
+git clone https://github.com/CoderTypist/myUtil.git
+# appends aliases to .bashrc
 cat ./myUtil/myAliases.txt >> ~/.bashrc
 rm ./myUtil/myAliases.txt
-
+# deletes installer and readme
+rm ./myUtil/installMyUtil
+rm ./myUtil/README.md
+# gives everyone execute access
+chmod +x ./myUtil/*
 # moves scripts to /usr/local/bin
-git clone https://github.com/CoderTypist/myUtil.git
 sudo mv ./myUtil/* /usr/local/bin
-sudo rm /usr/local/bin/installMyUtil
+# deletes the cloned repository
 rm -rf ./myUtil
