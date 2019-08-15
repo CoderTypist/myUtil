@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# lists the contents of the current directory
+# if no directory was provided
+if [ $# == 0 ]; then
+    ./list
+    exit
+fi
+
+if [ ! -d "$*" ]; then
+    echo "$* is not a directory"
+    exit
+fi
+
+ls -l "$*" | awk 'NR>1{for(i=9;i<=NF;i++){printf("%s", $i);}printf("\n");}'

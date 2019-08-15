@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# copies aliases to .bashrc
+cat ./myUtil/myAliases.txt >> ~/.bashrc
+rm ./myUtil/myAliases.txt
+
+# moves scripts to /usr/local/bin
+git clone https://github.com/CoderTypist/myUtil.git
+sudo mv ./myUtil/* /usr/local/bin
+sudo rm /usr/local/bin/installMyUtil
+rm -rf ./myUtil
