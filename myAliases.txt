@@ -1,3 +1,4 @@
+
 # myAliases
 # https://github.com/CoderTypist/myUtil/blob/master/myAliases.txt
 alias cdbin='cd /usr/bin'
