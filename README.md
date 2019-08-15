@@ -1,16 +1,13 @@
 # myUtil
 
 
-HOW TO DOWNLOAD:
+HOW TO INSTALL:
 
 
-wget https://raw.githubusercontent.com/CoderTypist/myUtil/master/installMyUtil
+git clone https://github.com/CoderTypist/myUtil.git
 
 
-chmod u+x installMyUtil
-
-
-./installMyUtil
+./myUtil/installMyUtil
 
 
 =====================================
