@@ -1,4 +1,5 @@
 #!/bin/bash
+# author Christian Bargraser
 
 # if not directory was provided, the current directory is used
 if [ $# -eq 0 ]; then

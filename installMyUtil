@@ -1,4 +1,5 @@
 #!/bin/bash
+# author Christian Bargraser
 
 # appends aliases to .bashrc
 cat ./myUtil/myAliases.txt >> ~/.bashrc

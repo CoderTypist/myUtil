@@ -1,1 +1,17 @@
-ls -l | awk 'NR>1{for(i=9;i<=NF;i++){printf("%s", $i);}printf("\n");}'
+#!/bin/bash
+# author Christian Bargraser
+
+# if not directory was provided, the current directory is used
+if [ $# -eq 0 ]; then
+    ls -l | awk 'NR>1{for(i=9;i<=NF;i++){printf("%s", $i);}printf("\n");}'
+
+# if a directory was provided
+else
+    if [ ! -d "$*" ] && [ ! -f "$*" ]; then
+        # use ls to generate error message
+        errmsg=$(ls "$*" 2>&1)
+        echo $(echo "$errmsg" | sed "s/^ls/plain/g")
+        exit
+    fi
+    ls -l "$*" | awk 'NR>1{for(i=9;i<=NF;i++){printf("%s", $i);}printf("\n");}'
+fi
