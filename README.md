@@ -34,16 +34,16 @@ ls will list multiple directory entries on the same line in the terminal. ls -l 
 WHAT EACH SCRIPT DOES
 
 
-list
+cs 
 
 
-Lists each item in the current directory on its own line
+Lists each directory entry on its own line
 
 
-lsdir
+plain
 
 
-Lists each item in the specific directory on its own line. If no directory is specified, list is invoked.
+Lists each item in the current directory on its own line (all text is white)
 
 
 path
