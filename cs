@@ -50,7 +50,6 @@ while read line; do
     fi
 
     echo "  $entry"
-    tput sgr0
 
 done <<< "$entries"
 
