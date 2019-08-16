@@ -37,7 +37,7 @@ while read line; do
         continue
     fi
     
-    isexec=$(echo "$line" | sed -r "s/^[^x]*x.*$/YES/g")
+    isexec=$(echo "$perms" | sed -r "s/^[^x]*x.*$/YES/g")
     
     # is executable
     if [[ "$isexec" == "YES" ]]; then
@@ -50,6 +50,7 @@ while read line; do
     fi
 
     echo "  $entry"
+    tput sgr0
 
 done <<< "$entries"
 
