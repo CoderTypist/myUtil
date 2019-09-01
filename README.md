@@ -62,3 +62,12 @@ mvlbin
 
 
 moves the specified item to /usr/local/bin
+
+
+trim
+
+
+Removes the first and last character from the received text. You must use xargs when invoking trim.
+
+
+Ex: echo "Happy" | xargs trim

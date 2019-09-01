@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# author Christian Bargraser
+# removes the first and last character from input text
+
+# If nothing was received, print an empty line
+if [ $# -eq 0 ]; then
+    echo
+    exit 1
+fi
+
+text="$*"
+
+# The -n switch is needed, or the newline character will be counted by wc
+len=$(echo -n "$text" | wc -c)
+
+# If the length of the string is less than 3, print an empty line
+if [ "$len" -lt 3 ]; then
+    echo
+    exit 1
+fi
+
+# trims off the first character
+text="${text:1:$len}"
+
+# trims off the last character
+text="${text::-1}"
+
+echo "$text"
