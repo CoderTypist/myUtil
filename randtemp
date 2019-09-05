@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Nothing is printed if the user given directory does not exist
+# This can be used for testing in your script:
+#
+# EXAMPLE
+# 
+# tempFileName = $(randtemp ./Docmnts)
+# if [ -z "$tempFileName" ]; then
+#     echo "Failed to create temp file"
+#     exit
+# fi
+
+dir=""
+name=""
+
+# if no directory was provided, use the current directory
+if [ $# -eq 0 ]; then
+    dir="./"
+    name="./"
+
+# if a directory was provided
+else
+    # if the user provided input does not end in a '/', add it
+    if [[ "$*" != */ ]]; then
+        dir="${*}/"
+        name="$dir"
+    else
+        dir="$*"
+        name="$*"
+    fi
+fi
+
+# check to see if the directory exists
+if [ ! -d "$dir" ]; then
+    exit 1
+fi
+
+echo "$name"
+touch "$name"
