@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# if no file was provided
+if [ "$#" -eq 0 ]; then
+    echo "No file was provided"
+    exit 1
+fi
+
+if [[ "$1" == "-help" ]]; then
+    echo "Usage: dewiki <file to \"dewikize\">"
+    exit 1
+fi
+
+# if the file/path does not exist
+file="$*"
+if [ ! -f "$file" ]; then
+    echo "File does not exist: $file"
+    exit 1
+fi
+
+# creates the temporary file
+tempFile=$(./randtemp)
+
+# if the tempFile could not be created
+if [ -z tempFile ]; then
+    echo "Failed to create temporary file"
+    exit 1
+fi
+
+# removes all [] from the text
+while read line; do
+    line=$(echo "$line" | sed -E 's/\[[0-9]+\]//g')
+    echo "$line" >> "$tempFile"
+done < "$file"
+
+cat "$tempFile" > "$file"
+rm "$tempFile"
