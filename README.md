@@ -73,7 +73,7 @@ randtemp
 
 Description:
 
-Creates a random file in the format: ./<directory>/temp_<random_number>
+Creates a random file in the format: ./some_directory/temp_randomNumber
 
 How it works:
 
