@@ -71,7 +71,11 @@ output: hi
 
 randtemp
 
+Description:
+
 Creates a random file in the format: ./<directory>/temp_<random_number>
+
+How it works:
 
 If no input is provided, the file is created in the current directory
 
@@ -79,11 +83,16 @@ If a directory is provided, randtemp checks to see if the directory exists.
 
 If the directory does not exist, no file is created.
 
-You may write to a file called, "temp", but a file named "temp" may already exist and you may not want to overwrite the contents of that file.
+Purposes:
 
-DISCLAIMER:
+1) You may need to create multiple temporary files during your script, and randtemp will create one for you. You won't have to make up the name yourself or worry about the file already existing.
+
+2) You may write want to write to a file named "temp", but a file named "temp" may already exist, and you may not want to overwrite the contents of that file.
+
+Disclaimer:
 
 randtemp can only generate 1 of 32768 possible filenames
 
 If all 32768 filenames already exist, this program program will run forever
+
 

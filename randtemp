@@ -36,5 +36,12 @@ if [ ! -d "$dir" ]; then
     exit 1
 fi
 
+name="${dir}temp_$RANDOM"
+
+# if a file with the given name already exists
+while [ -f "$name" ]; do
+    name="${dir}temp_$RANDOM"
+done
+
 echo "$name"
 touch "$name"
