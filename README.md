@@ -8,7 +8,7 @@ git clone https://github.com/CoderTypist/myUtil.git
 
 =====================================
 
-######  WHAT IS MYUTIL?
+#####  WHAT IS MYUTIL?
 
 myUtil is a series of aliases and bash scripts I made to make it easier to navigate through directories and add custom scripts to /usr/local/bin
 
@@ -97,8 +97,21 @@ If all 32768 filenames already exist, this program program will run forever
 
 ====================
 
-###### dewiki
+##### dewiki
 
-Removes all instances of [*one or more numbers*] from the specified file.
+Removes all instances of [*one or more numbers*] from the specified file
 
 Ex: dewiki textFromWikipedia.txt
+
+====================
+
+##### rmbl
+
+Removes all blank lines from the specified file
+
+====================
+
+##### rmbldir
+
+Removes all blank lines from files in the specified directory
+

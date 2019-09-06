@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# author: Christian Bargraser
+# applies rmbl to all files in the given directory
+# rmbl removes all blank lines from a file
+
+# if a directory was not provided
+if [ "$#" -eq 0 ]; then
+    echo "Not enough arguments"
+    echo "Usage: rmbldir <directory_to_apply_rmbl_to>"
+    exit 1
+fi
+
+# if the directory does not exist
+if [ ! -d "$1" ]; then
+    echo "No such directory: $1"
+    exit 1
+fi
+
+# loop through every entry in the directory
+for file in $(ls "$1"); do
+    
+    entryName="${1}/$file"
+    
+    if [ -f "$entryName" ]; then
+        ./rmbl "$entryName"
+    fi
+
+done

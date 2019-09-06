@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# author: Christian Bargraser
+# removes all blank lines fromm a file
+
+# if no file path was provided
+if [ "$#" -eq 0 ]; then
+    echo "No file path was provided"
+    echo "Usage: rmbl <file_path>"
+    exit 1
+fi
+
+# if the file does not exist
+if [ ! -f "$1" ]; then
+    echo "File does not exist: $*"
+    exit 1
+fi
+
+# -i: edit the file in place
+sed -E -i '/^[\t\n ]*$/d' "$1"

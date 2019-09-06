@@ -18,20 +18,5 @@ if [ ! -f "$file" ]; then
     exit 1
 fi
 
-# creates the temporary file
-tempFile=$(./randtemp)
-
-# if the tempFile could not be created
-if [ -z tempFile ]; then
-    echo "Failed to create temporary file"
-    exit 1
-fi
-
 # removes all [] from the text
-while read line; do
-    line=$(echo "$line" | sed -E 's/\[[0-9]+\]//g')
-    echo "$line" >> "$tempFile"
-done < "$file"
-
-cat "$tempFile" > "$file"
-rm "$tempFile"
+sed -E -i 's/\[[0-9]+\]//g' "$file"
