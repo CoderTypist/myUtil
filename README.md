@@ -115,3 +115,17 @@ Removes all blank lines from the specified file
 
 Removes all blank lines from files in the specified directory
 
+====================
+
+##### dualdisp
+
+Displays two files to the console side by side.
+
+Spaces are printed in place of newline characters and tabs. 
+
+`dualdisp file1.txt file2.txt`
+
+You can select how many characters from a file to display per line. The default is 20.
+
+`dualdisp file.txt file2.txt 10`
+

@@ -7,6 +7,9 @@ rm ./myUtil/myAliases.txt
 # deletes installer and readme
 rm ./myUtil/installMyUtil
 rm ./myUtil/README.md
+# c programs
+gcc -o dualdisp dualdislp.c
+rm dualdisp.c
 # gives everyone execute access
 chmod +x ./myUtil/*
 # moves scripts to /usr/local/bin
