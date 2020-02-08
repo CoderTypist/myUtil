@@ -8,8 +8,8 @@ rm ./myUtil/myAliases.txt
 rm ./myUtil/installMyUtil
 rm ./myUtil/README.md
 # c programs
-gcc -o dualdisp dualdisp.c
-rm dualdisp.c
+gcc -o ./myUtil/dualdisp ./myUtil/dualdisp.c
+rm ./myUtil/dualdisp.c
 # gives everyone execute access
 chmod +x ./myUtil/*
 # moves scripts to /usr/local/bin
