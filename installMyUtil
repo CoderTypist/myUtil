@@ -8,7 +8,7 @@ rm ./myUtil/myAliases.txt
 rm ./myUtil/installMyUtil
 rm ./myUtil/README.md
 # c programs
-gcc -o dualdisp dualdislp.c
+gcc -o dualdisp dualdisp.c
 rm dualdisp.c
 # gives everyone execute access
 chmod +x ./myUtil/*
