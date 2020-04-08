@@ -135,7 +135,7 @@ You can select how many characters from a file to display per line. The default 
 
 Loads all of the specified programs into clisp.
 
-`./cload ./lispFunctions.lsp ./lispCommands.lsp`
+`cload ./lispFunctions.lsp ./lispCommands.lsp`
 
 The above translates to:
 
