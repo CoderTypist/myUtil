@@ -1,0 +1,31 @@
+#!/bin/bash
+# Author: Christian Bargraser
+
+# Ex: 
+# ./cload ./lispFunctions.lsp ./lispCommands.lsp
+#
+# The following command is run:
+# (load "./lispFunctions.lsp" :echo T :print T) (load "./lispCommands.lsp" :echo T :print T) | clisp
+
+if [ "$#" -eq 0 ]; then
+    exit 0
+fi
+
+prefix="(load \""
+suffix="\" :echo T :print T)"
+
+for file in "$@"; do
+
+    if [ ! -f "$file" ]; then
+        continue
+    fi
+
+    #(load "<fileName>" :echo T :print T)
+    cur="${prefix}${file}$suffix"
+    all="$all $cur"
+done
+
+if [ ! -z "$all" ]; then
+	all="$all | clisp"
+	echo "$all" | clisp
+fi

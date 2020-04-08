@@ -129,3 +129,15 @@ You can select how many characters from a file to display per line. The default 
 
 `dualdisp file.txt file2.txt 10`
 
+====================
+
+##### cload
+
+Loads all of the specified programs into clisp.
+
+`./cload ./lispFunctions.lsp ./lispCommands.lsp`
+
+The above translates to:
+
+`(load "./lispFunctions.lsp" :echo T :print T) (load "./lispCommands.lsp" :echo T :print T) | clisp`
+
