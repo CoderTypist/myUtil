@@ -26,6 +26,6 @@ for file in "$@"; do
 done
 
 if [ ! -z "$all" ]; then
-	all="$all | clisp"
+	all="$all | (exit)"
 	echo "$all" | clisp
 fi
